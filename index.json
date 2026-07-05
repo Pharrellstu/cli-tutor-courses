@@ -1,0 +1,16 @@
+{
+  "formatVersion": 1,
+  "generatedAt": "2026-07-05T12:11:51.558Z",
+  "tarball": "https://codeload.github.com/Pharrellstu/cli-tutor-courses/tar.gz/refs/heads/main",
+  "courses": [
+    {
+      "id": "js-greeter",
+      "title": "Build a Greeter CLI in JavaScript",
+      "language": "JavaScript",
+      "level": "new-to-programming",
+      "description": "Learn JavaScript fundamentals — functions, defaults, and command-line arguments — by building a small greeting CLI from scratch.",
+      "projectGoal": "A tiny command-line tool that greets people by name",
+      "stepsTotal": 3
+    }
+  ]
+}

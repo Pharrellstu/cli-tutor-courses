@@ -1,0 +1,5 @@
+{
+  "title": "Greeter basics",
+  "summary": "Write your first function, give it a sensible default, and hook it up to the command line.",
+  "steps": ["01-create-greet", "02-default-name", "03-cli-args"]
+}

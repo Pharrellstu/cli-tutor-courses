@@ -1,0 +1,12 @@
+{
+  "title": "Talk to the command line",
+  "test": {
+    "command": "node ../.tests/step-03.test.js"
+  },
+  "filesToOpen": ["greet.js"],
+  "hints": [
+    "The first real argument lives at `process.argv[2]`. It's `undefined` when the user passes nothing.",
+    "You already handle a missing name — `greet(process.argv[2])` uses your default when the argument is undefined.",
+    "Add `console.log(greet(process.argv[2]));` at the bottom of the file."
+  ]
+}

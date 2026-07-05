@@ -1,0 +1,12 @@
+{
+  "title": "Your first function",
+  "test": {
+    "command": "node ../.tests/step-01.test.js"
+  },
+  "filesToOpen": ["greet.js"],
+  "hints": [
+    "A function that returns a value needs the `return` keyword — `console.log` prints but does not return.",
+    "You can glue strings together with `+`, or use a template literal: `` `Hello, ${name}!` ``.",
+    "The exact shape is: `function greet(name) { return `Hello, ${name}!`; }`"
+  ]
+}

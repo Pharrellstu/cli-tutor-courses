@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "id": "js-greeter",
+  "title": "Build a Greeter CLI in JavaScript",
+  "language": "JavaScript",
+  "level": "new-to-programming",
+  "projectGoal": "A tiny command-line tool that greets people by name",
+  "description": "Learn JavaScript fundamentals — functions, defaults, and command-line arguments — by building a small greeting CLI from scratch.",
+  "generatedBy": "fixture",
+  "createdAt": "2026-07-02T00:00:00.000Z",
+  "tools": [
+    {
+      "name": "Node.js",
+      "checkCommand": "node --version",
+      "minVersion": "18",
+      "why": "Runs your JavaScript code and the step tests.",
+      "install": {
+        "windows": "Download the installer from https://nodejs.org and run it.",
+        "macos": "Run `brew install node` or download from https://nodejs.org.",
+        "linux": "Use your package manager, e.g. `sudo apt install nodejs npm`."
+      }
+    }
+  ],
+  "modules": ["01-basics"]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Sensible defaults",
+  "test": {
+    "command": "node ../.tests/step-02.test.js"
+  },
+  "filesToOpen": ["greet.js"],
+  "hints": [
+    "Default values go right in the parameter list: `function f(x = something)`.",
+    "The default here is the string \"world\": `function greet(name = \"world\")`."
+  ]
+}

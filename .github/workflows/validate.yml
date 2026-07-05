@@ -1,0 +1,31 @@
+name: validate
+on:
+  pull_request:
+    paths: ["courses/**"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build cli-tutor CLI
+        run: |
+          git clone --depth 1 https://github.com/Pharrellstu/cli-tutor.git "$RUNNER_TEMP/cli-tutor"
+          cd "$RUNNER_TEMP/cli-tutor"
+          npm ci
+          npm run typecheck
+      - name: Validate changed courses
+        run: |
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD -- courses/ | cut -d/ -f2 | sort -u)
+          if [ -z "$changed" ]; then echo "No course changes."; exit 0; fi
+          for c in $changed; do
+            if [ -d "courses/$c" ]; then
+              echo "::group::validate courses/$c"
+              node "$RUNNER_TEMP/cli-tutor/packages/server/dist/cli.js" validate "courses/$c"
+              echo "::endgroup::"
+            fi
+          done
